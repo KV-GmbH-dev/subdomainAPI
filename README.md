@@ -6,18 +6,6 @@ This API Client is a standalone PHP solution that may be implemented or be used 
 
 The clientAPI class is mainly for establishing a connection, receiving and processing the response while the subdomainAPI class forms the body for the requests with given array.
 
-For more information, please refer to the documentation at:
-
-https://www.subdomain.net
-
-## Getting Started
-
-Clone the sample registrar module locally:
-
-```bash
-git clone git@github.com:/KV-GmbH-dev/subdomainAPI
-```
-
 
 ## Tests ##
 
