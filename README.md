@@ -15,7 +15,7 @@ https://www.subdomain.net
 Clone the sample registrar module locally:
 
 ```bash
-git clone git@github.com:
+git clone git@github.com:/KV-GmbH-dev/subdomainAPI
 ```
 
 
