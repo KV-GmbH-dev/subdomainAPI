@@ -97,26 +97,26 @@ class clientAPI
 
         $this->results = $this->processResponse($response);
 
+        /** Catch Laravel Sanctum Standard for unauthenticated */
+        if ($this->getFromResponse("message")) {
 
-        if($this->getFromResponse("error")) {
+            $error = $this->getFromResponse("message");
+
+            throw new \Exception("API Error: " . $error);
+        }
+
+        /** Catch error messages */
+        if ($this->getFromResponse("error")) {
             throw new \Exception('API Error:' . $this->getFromResponse("error"));
 
         }
 
-        if(!$this->getFromResponse("success") and $method !== "GET") {
+        if (!$this->getFromResponse("success")) {
 
             $error = $this->getFromResponse("error") ? $this->getFromResponse("error") : "Unknown API Error. Please consult the module log.";
 
-            $status = $this->getFromResponse("status") ? $this->getFromResponse("status") : "";
-
-            throw new \Exception("API Error: " . $error . " Status: " . $status);
+            throw new \Exception("API Error: " . $error);
         }
-        elseif ($this->getFromResponse("message")){
-
-            $error = $this->getFromResponse("message");
-
-        throw new \Exception("API Error: " . $error);
-    }
 
 
         if ($this->results === null && json_last_error() !== JSON_ERROR_NONE) {
