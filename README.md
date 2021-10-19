@@ -18,6 +18,7 @@ Clone the sample registrar module locally:
 git clone git@github.com:
 ```
 
+
 ## Tests ##
 
 The script RegisterComplete.php includes a sample array to send with requests and every available method.
