@@ -9,7 +9,7 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
 $data = ([
-    'API_Token' => '7|W0bfG0PB6keWFVlTJNW6jtQYPU5w6OXlvpj7ZzhQ',
+    'API_Token' => '',  // You have to enter the API Key here
     'sld' => 'coolnewsubdomain',
     'tld' => '.look.in',
     'tldsToInclude' => array(
