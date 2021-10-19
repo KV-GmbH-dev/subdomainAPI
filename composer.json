@@ -1,0 +1,9 @@
+{
+    "require": {
+        "monolog/monolog": "2.2",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {"subdomainAPI\\": "/"}
+    }
+}
