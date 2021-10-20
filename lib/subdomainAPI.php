@@ -4,6 +4,7 @@
 namespace lib;
 
 require __DIR__ . '/clientAPI.php';
+use lib\clientAPI as client;
 
 /**
  * Sample API Client.
@@ -121,7 +122,7 @@ class subdomainAPI
 
 
         try {
-            $api = new clientAPI($apiToken);
+            $api = new client($apiToken);
             return $api->post('subdomains', $postfields);
 
 
@@ -161,7 +162,7 @@ class subdomainAPI
         );
 
         try {
-            $api = new clientAPI($apiToken);
+            $api = new client($apiToken);
             $api->patch('subdomains', $postfields);
 
 
@@ -203,7 +204,7 @@ class subdomainAPI
         );
 
         try {
-            $api = new clientAPI($apiToken);
+            $api = new client($apiToken);
             $api->get('subdomains/' . $postfields["domain"], $postfields);
 
             $domainInformation = $api->getFromResponse('DomainInformation');
@@ -256,7 +257,7 @@ class subdomainAPI
         );
 
         try {
-            $api = new clientAPI($apiToken);
+            $api = new client($apiToken);
             return $api->patch('subdomains', $postfields);
 
 
@@ -295,7 +296,7 @@ class subdomainAPI
         );
 
         try {
-            $api = new clientAPI($apiToken);
+            $api = new client($apiToken);
             $api->get('subdomains/' . $postfields["domain"], $postfields);
 
             return array(
@@ -458,7 +459,7 @@ class subdomainAPI
         }
 
         try {
-            $api = new clientAPI($apiToken);
+            $api = new client($apiToken);
             return $api->patch('subdomains', $postfields);
 
         } catch (\Exception $e) {
@@ -489,7 +490,7 @@ class subdomainAPI
             'group_id' => 2,    //  Do not change, if you want to have the lower reseller prices.
         );
         try {
-            $api = new clientAPI($apiToken);
+            $api = new client($apiToken);
             return $api->post('subdomains/availability', $postfields);
 
         } catch (\Exception $e) {
@@ -523,7 +524,7 @@ class subdomainAPI
         );
 
         try {
-            $api = new clientAPI($apiToken);
+            $api = new client($apiToken);
             return $api->delete('subdomains/' . $postfields["domain"], $postfields);
 
         } catch (\Exception $e) {
@@ -557,7 +558,7 @@ class subdomainAPI
         );
 
         try {
-            $api = new clientAPI($apiToken);
+            $api = new client($apiToken);
             $api->get('sync/' . $postfields['domain'], $postfields);
 
             return array(
@@ -598,7 +599,7 @@ class subdomainAPI
         );
 
         try {
-            $api = new clientAPI($apiToken);
+            $api = new client($apiToken);
             $api->post('eppcode', $postfields);
 
             if ($api->getFromResponse('eppcode')) {

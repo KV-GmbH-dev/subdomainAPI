@@ -9,8 +9,8 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
 $data = ([
-    'API_Token' => '',  // You have to enter the API Key here
-    'sld' => 'coolnewsubdomain',
+    'API_Token' => '12|AaRi5Fqp1JbkNMlYo98VeN6l2SKoHmJSTy6EkpwR',  // You have to enter the API Key here
+    'sld' => 'coolnewsubdomain2',
     'tld' => '.look.in',
     'tldsToInclude' => array(
         '.co.de',
@@ -101,8 +101,5 @@ $result = $api->Sync($data);
 $logger->info(json_encode($result));
 $result = $api->GetEPPCode($data);
 $logger->info(json_encode($result));
-
-
-#$logger->info(implode('|',$result));
 
 
