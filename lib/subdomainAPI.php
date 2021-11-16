@@ -486,8 +486,7 @@ class subdomainAPI
         // Build post data
         $postfields = array(
             'searchTerm' => $data['sld'],
-            'tldsToSearch' => $data['tldsToInclude'],
-            'group_id' => 2,    //  Do not change, if you want to have the lower reseller prices.
+            'tldsToSearch' => $data['tldsToInclude']
         );
         try {
             $api = new client($apiToken);
