@@ -14,7 +14,7 @@ use Closure;
 
 class clientAPI
 {
-    const API_URL = 'https://registry.kv.de/api/';
+    const API_URL = 'https://subdomain.net/api/';
 
     protected $results = array();
 
